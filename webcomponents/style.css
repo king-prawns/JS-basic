@@ -1,0 +1,7 @@
+first-element {
+  cursor: pointer;
+}
+
+first-element[clicked] {
+  color: red;
+}
