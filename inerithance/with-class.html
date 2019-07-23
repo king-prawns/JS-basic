@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Object-oriented JavaScript inheritance</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div>
+      <label for="jscode">Enter code:</label>
+      <input type="text" id="jscode" />
+      <button>Submit code</button>
+    </div>
+
+    <p></p>
+  </body>
+  <script src="./with-class.js"></script>
+  <script>
+    var input = document.querySelector("input");
+    var btn = document.querySelector("button");
+    var para = document.querySelector("p");
+    btn.onclick = function() {
+      var code = input.value;
+      para.textContent = eval(code);
+    };
+    input.addEventListener("keyup", e => {
+      if (e.keyCode === 13) {
+        var code = input.value;
+        para.textContent = eval(code);
+      }
+    });
+  </script>
+</html>
