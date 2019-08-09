@@ -70,17 +70,17 @@ myArray = ["Bob", "Fred"];
 
 let myStr: string = myArray[0];
 
-class Animal {
+class IAnimal {
   name: string;
 }
-class Dog extends Animal {
+class IDog extends IAnimal {
   breed: string;
 }
 
-// Error: indexing with a numeric string might get you a completely separate type of Animal!
+// Error: indexing with a numeric string might get you a completely separate type of IAnimal!
 interface NotOkay {
-  [x: number]: Animal;
-  [x: string]: Dog;
+  [x: number]: IAnimal;
+  [x: string]: IDog;
 }
 
 interface NumberDictionary {
